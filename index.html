@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript Example</title>
+  </head>
+  <body>
+    <h1 id = "header", style="font-size: 12px">Javascript Example</h1>
+    <button type="button" name="button" onclick="changeText()">Click Me!</button>
+    <br>
+    <button type="button" name="button" onclick="increaseText()">+</button>
+    <button type="button" name="button" onclick="decreaseText()">-</button>
+    <button type="button" name="button" onclick="changeTextRed()">Red</button>
+    <button type="button" name="button" onclick="changeTextBlue()">Blue</button>
+
+
+
+    <script type="text/javascript">
+      //No predefined variable types
+      var name = "Bob";
+      var age  = 29;
+      //Functions like .length does not need () in Javascript
+      var length = name.length;
+
+      //alert gives an alert at the top of the page
+      //alert(name + " is " + age + " years old.");
+      //alert(length);
+      var i = 0;
+
+      while (i < 10)
+      {
+        if (i % 2 == 0)
+        {
+          console.log("Hello World")
+        }
+
+        i++;
+      }
+
+      //console.log puts messages into the F12 console
+      //console.log("Hello World");
+
+
+      function changeText()
+      {
+        //This could also be done via a var counter to add 1 every time you click this
+        //And if statements using %
+        if (document.getElementById("header").innerHTML == "Testing")
+        {
+          document.getElementById("header").innerHTML = "Javascript Example";
+        }
+        else if (document.getElementById("header").innerHTML == "Javascript Example")
+        {
+          document.getElementById("header").innerHTML = "Testing";
+        }
+        //Finds an object with a tag "header" and changes it's text to "Testing"
+        //document.getElementById("header").innerHTML = "Testing";
+      }
+
+      var fSize = 12;
+
+      function increaseText()
+      {
+        fSize = fSize + 1;
+        document.getElementById("header").style.fontSize = fSize + "px";
+      }
+
+      function decreaseText()
+      {
+        fSize = fSize - 1;
+        document.getElementById("header").style.fontSize = fSize + "px";
+      }
+
+      function changeTextRed()
+      {
+        document.getElementById("header").style.color = "red";
+      }
+
+      function changeTextBlue()
+      {
+        document.getElementById("header").style.color = "blue";
+      }
+
+
+    </script>
+  </body>
+</html>
